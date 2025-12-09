@@ -2,4 +2,4 @@
 
 This folder contains the [geoIACS GML Application schema](geoiacs.xsd)
 
-To access the GML application schema, please use [this link](https://geoiacs.github.io/physical-models/application-schema/geoiacs.xsd) in your ETL software tools (hale studio, FME, etc.).
+N.B.: To access the GML application schema from your ETL software tools (such as hale studio, FME, etc.), please use [this link](https://geoiacs.github.io/physical-models/application-schema/geoiacs.xsd).
