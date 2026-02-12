@@ -38,6 +38,15 @@ Unique ID of agricultural parcel.
 European unique alphanumerical identification code of agricultural parcel. It should follow the rules of INSPIRE when delivered for EU use.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="geometry" type="gml:SurfacePropertyType">
+						<xs:annotation>
+							<xs:documentation>--Name--
+Geometry
+
+-- Definition --
+Spatial representation of agricultural parcel</xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="holdingId" type="xs:string">
 						<xs:annotation>
 							<xs:documentation>--Name--
@@ -249,6 +258,17 @@ Unique ID of reference parcel referred to in Art. 68 (2)(a) of R (EU) 2021/2116.
 European unique alphanumerical thematic identification code of reference parcel. It should follow the rules of INSPIRE when delivered for EU use.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="geometry" type="gml:SurfacePropertyType">
+						<xs:annotation>
+							<xs:documentation>
+--Name--
+Geometry
+
+-- Definition --
+Spatial representation of the reference parcel as referred to in Art. 2(2) of R (EU) 2022/1172
+ </xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="beginLifespanVersion" type="xs:dateTime">
 						<xs:annotation>
 							<xs:documentation>-Name-
@@ -331,6 +351,18 @@ Unique ID of site
 
 -- Description --
 European unique alphanumerical identification code of site. It should follow the rules of INSPIRE when delivered for EU use.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="geometry" type="gml:GeometryPropertyType">
+						<xs:annotation>
+							<xs:documentation>
+--Name--
+Geometry
+
+-- Definition --
+Spatial representation of site. It can be a point (site location) or a surface (site building footprint)
+
+-</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="holdingId" type="xs:string">
@@ -482,6 +514,16 @@ Unique ID of non-agricultural eligible area.
 
 -- Description --
 European unique alphanumerical identification code of non-agricultural eligible area. It should follow the rules of INSPIRE when delivered for EU use.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="geometry" type="gml:SurfacePropertyType">
+						<xs:annotation>
+							<xs:documentation>
+--Name--
+Geomety
+
+-- Definition --
+Spatial representation of non-agricultural eligible area.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="holdingId" type="xs:string">
@@ -668,6 +710,27 @@ Unique ID of ecological focus area.
 European unique alphanumerical identification code of ecological focus area. It should follow the rules of INSPIRE when delivered for EU use.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
+					<xs:element name="geometry" type="gml:GeometryPropertyType">
+						<xs:annotation>
+							<xs:documentation>
+--Name--
+Geometry
+
+-- Definition --
+Spatial representation of ecological focus area.
+
+-- Description --
+Representation of the geographical dimension/position of the ecological focus area. EFA may be represented as , point,  curve, or surface depending on the options allowed by Art 46(3) of (EU) R No 1307/2013 and the choice of the MS/region.
+
+NOTE 1: The established area referred in DSCG/2014/31 is derived from surface representation of the geometric extent.
+
+NOTE 2: The converted area referred in DSCG/2014/31 is derived from a geometric representation with reduced dimensions (curves or points)
+
+NOTE 3: In case of GM_Point geometry - Clementini point should be used.
+
+NOTE 4: When GM_curve representation is applied, it should be within the polygon that would represent the feature if full geometric extent was used. </xs:documentation>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="convertedArea" type="gml:AreaType">
 						<xs:annotation>
 							<xs:documentation>
@@ -685,6 +748,22 @@ NOTE 1: According to DSCG/2014/31
 - Converted area: Virtual area of EFAs obtained when using the conversion factors of Annex II of Regulation (EU) No 639/2014.
 
 NOTE 2: EFA area shall be given in ha.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ecologicalFocusAreaType" type="gml:ReferenceType">
+						<xs:annotation>
+							<xs:documentation>
+--Name--
+Ecological focus area type
+
+-- Definition --
+Ecological focus area type as listed in Art. 46(2) of (EU) R 1307/2013.
+
+-- Description --
+The value of this attribute shall be taken from the EcologicalFocusAreaTypeValue code list. </xs:documentation>
+							<xs:appinfo>
+								<gmlexr:targetCodeList>EcologicalFocusAreaTypeValue</gmlexr:targetCodeList>
+							</xs:appinfo>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="beginLifespanVersion" type="xs:dateTime">
@@ -778,6 +857,16 @@ Unique ID of ecolandscape element
 
 -- Description --
 European unique alphanumerical identification code of ecolandscape element. It should follow the rules of INSPIRE when delivered for EU use.</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="geometry" type="gml:GeometryPropertyType">
+						<xs:annotation>
+							<xs:documentation>
+--Name--
+Geometry
+
+-- Definition --
+Spatial representation of ecolandscape element</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="holdingId" type="xs:string">
