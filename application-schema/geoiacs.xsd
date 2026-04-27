@@ -8,12 +8,12 @@ geoIACS Data Model v2.0 - Changelog v1.0 to v2.0
 * MODIFIED `AgriculturalParcel` (AP): 
   - Replaced `organicFarming` (boolean) with `organicStatus` (codelist).
   - Removed `agriculturalAreaType` (concept moved to AA).
-  - Added boolean flags for regulatory constraints (`isANC`, `isN2000`, `isRBM`, `isASD`).
+  - Added boolean flags for regulatory constraints/management commitments (`isANC`, `isN2000`, `isRBM`, `isASD`).
 * MODIFIED `OtherEligibleArea` (OEA):
-  - Added boolean flags for regulatory constraints (`isANC`, `isN2000`, `isRBM`, `isASD`).
+  - Added boolean flags for regulatory constraints/management commitments (`isANC`, `isN2000`, `isRBM`, `isASD`).
   - Added `isFormerAANowSetAside` boolean flag.
 * MODIFIED `FarmAnimalSpecies`: Changed `numberOfAnimals` from integer to a codelist reference (`AnimalRangeValue`).
-* MODIFIED `EcoLandscapeElement` (ELE): Shortened attribute names (`ELEType`, `ELEDesignation`) and made `relatedRP` mandatory.
+* MODIFIED `EcoLandscapeElement` (ELE): Shortened attribute names (`ELEType`, `ELEDesignation`) and changed `relatedRP` multiplicity from 1 to 1..*.
 * MODIFIED `ReferenceParcel` (RP): Updated associations (removed `relatedNAEA`, added `relatedAA` and `relatedOEA`).
 ================================================================================
 -->
